@@ -1,0 +1,9 @@
+FROM python-3.11.2-buster
+WORKDIR /app
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+COPY . .
+
+HEALTHCHECK CMD curl --fail https://lnkt4gjfcsr4rxvyr46icmbb5y0mgmuf.lambda-url.eu-central-1.on.aws/ || exit 1  
+
+CMD ["python", "app.py"]

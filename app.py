@@ -9,8 +9,6 @@ def getJsonContentFromUrl():
         jsonContent = json.load(jsonRequest)
         print(jsonContent)
 
-starttime = time.time()
-
 while True:
     getJsonContentFromUrl()
-    time.sleep(5.0 - ((time.time() - starttime) % 5.0))
+    time.sleep(5)
