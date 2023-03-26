@@ -6,4 +6,4 @@ COPY . .
 
 HEALTHCHECK CMD curl --fail https://lnkt4gjfcsr4rxvyr46icmbb5y0mgmuf.lambda-url.eu-central-1.on.aws/ || exit 1  
 
-CMD ["python", "app.py"]
+CMD ["python", "-u", "app.py"]
